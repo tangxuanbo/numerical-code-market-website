@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>数码超市 | 购物车</title>
+  <link rel="stylesheet" href="css/shopCarStyle.css" />
+  <link href="images/logo.ico" rel="shortcut icon">
+  <script src="js/script.js"></script>
+</head>
+
+<body style="background-image: url(images/xuan.jpg);">
+  <div class="header"><img src="images/guangg.jpg" alt=""></div>
+  <li style="list-style: none;text-align: center;"><a href="#"
+      style="color: rgb(255, 255, 255);font-size:40px">我&nbsp;的&nbsp;购&nbsp;物&nbsp;车</a></li>
+  <div class="cartbox">
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th><label><input class="check-all check" type="checkbox" />全选</label></th>
+          <th>商品</th>
+          <th>单价（元）</th>
+          <th>数量</th>
+          <th>金额（元）</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td class="fav" colspan="6"><span class="f1" style="color: white;">元旦大促销</span><span
+              class="f2">全场送满2000减300元优惠券，4000减600优惠券，以此类推&nbsp;！</span></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="checkbox"><input class="check-one check" type="checkbox" /></td>
+          <td class="goods"><a href="#"><img src="images/g1.jpg" alt="" /><span>华硕猛禽ROG
+                RTX3060TI显卡O8G雪豹电竞特工台式电脑主机游戏显卡</span></a></td>
+          <td class="price">4899.00</td>
+          <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+              class="add">+</span></td>
+          <td class="subtotal">4899.00</td>
+          <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input class="check-one check" type="checkbox" /></td>
+          <td class="goods"><a href="#"><img src="images/g2.jpg" alt="" /><span>Beats Powerbeats Pro无线蓝牙耳机魔音运动跑步挂耳式入耳式耳麦
+              </span></a></td>
+          <td class="price">580.00</td>
+          <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+              class="add">+</span></td>
+          <td class="subtotal">580.00</td>
+          <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input class="check-one check" type="checkbox" /></td>
+          <td class="goods"><a href="#"><img src="images/g3.jpg" alt="" /><span>微软 Xbox 无线控制器 2020 冰雪白 磨砂黑 波动蓝手柄 Xbox
+                One官方配件 Xbox Series X/S 游戏手柄 新款 </span></a></td>
+          <td class="price">419.00</td>
+          <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+              class="add">+</span></td>
+          <td class="subtotal">419.00</td>
+          <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input class="check-one check" type="checkbox" /></td>
+          <td class="goods"><a href="#"><img src="images/g4.jpg"
+                alt="" /><span>德国樱桃MX8.0粉色CHERRY机械键盘87键红轴茶轴RGB背光电脑专用游戏cheery电竞黑轴chreey侧刻柚银青轴chrrey </span></a></td>
+          <td class="price">1409.00</td>
+          <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+              class="add">+</span></td>
+          <td class="subtotal">1409.00</td>
+          <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="foot" id="foot">
+      <label class="fl select-all"><input type="checkbox" class="check-all check" /> 全选</label>
+      <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+      <div class="fr closing"> 结 算</div>
+      <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+      <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span
+          class="arrow down">︾</span></div>
+      <div class="selected-view">
+        <div id="selectedViewList" class="clearfix">
+          <div><img src="images/1.jpg"><span>取消选择</span></div>
+        </div>
+        <span class="arrow">◆<span>◆</span></span>
+      </div>
+    </div>
+  </div>
+  <footer class="f">
+    <!--页脚-->
+    <div class="footer-1">
+
+      <div class="footer-2">
+        <dl>
+          <dt>购买指南</dt>
+          <dd><a href="#">会员介绍</a></dd>
+          <dd><a href="#">团购</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>支付方式</dt>
+          <dd><a href="#">在线支付</a></dd>
+          <dd><a href="#">货到付款</a></dd>
+          <dd><a href="#">分期付款</a></dd>
+          <dd><a href="#">公司转账</a></dd>
+        </dl>
+        <dl>
+          <dt>配送方式</dt>
+          <dd><a href="#">上门自提</a></dd>
+          <dd><a href="#">限时达</a></dd>
+          <dd><a href="#">速达配送</a></dd>
+          <dd><a href="#">配送费收取标准</a></dd>
+          <dd><a href="#">海外配送</a></dd>
+        </dl>
+        <dl>
+          <dt>售后服务</dt>
+          <dd><a href="#">售后政策</a></dd>
+          <dd><a href="#">退款说明</a></dd>
+          <dd><a href="#">价格保护</a></dd>
+          <dd><a href="#">返修/退换货</a></dd>
+          <dd><a href="#">取消订单</a></dd>
+        </dl>
+        <dl>
+          <dt>法律信息</dt>
+          <dd><a href="#">服务协议</a></dd>
+          <dd><a href="#">隐私政策</a></dd>
+          <dd><a href="#">知识产权</a></dd>
+        </dl>
+        <dl>
+          <dt>加入我们</dt>
+          <dd><a href="#">社会招聘</a></dd>
+          <dd><a href="#">校园招聘</a></dd>
+          <dd><a href="#">国际招聘</a></dd>
+        </dl>
+      </div>
+      <div class="footer-3">
+        <p style="cursor: pointer;" class="fpa"><a href="#">服务条款</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="#">隐私保护指引</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">隐私</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="#">使用条件</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">法律条款</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="#">合作招商</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">商家帮助</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="#">手机客户端下载</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">广告服务及商务合作</a></p>
+        <p style="cursor: pointer;"><a href="#">COPYRIGHT © 1998 – 2021 SHUMASUPERMARKET. ALL RIGHTS RESERVED.</a></p>
+        <p style="cursor: pointer;"><a href="#">数码超市 版权所有</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

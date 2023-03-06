@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>数码超市 | 首页</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="images/logo.ico" rel="shortcut icon">
+  <style>
+    .head15_menu_big ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .head15_menu_big ul li {
+      float: left;
+      position: relative;
+    }
+
+    .head15_menu_big ul li a,
+    .head15_menu_big ul li a:visited {
+      display: block;
+      width: 120px;
+      height: 33px;
+      font-weight: bold;
+      color: #FFFFFF;
+      background-color: #534e4e;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid #fff;
+      border-width: 0px 1px 0 0;
+      padding: 4px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid rgb(66, 64, 64);
+    }
+
+    .head15_menu_big a:hover,
+    a:active {
+      background-color: rgb(206, 118, 24);
+    }
+
+    .head15_menu_big ul li ul {
+      display: none;
+      z-index: 11;
+      margin-top: 9px;
+    }
+
+    .head15_menu_big ul li:hover a {
+      color: #fff;
+      background: rgb(125, 129, 132);
+    }
+
+    .head15_menu_big ul li:hover ul {
+      display: block;
+      position: absolute;
+      top: 31px;
+      left: 0;
+      width: 105px;
+    }
+
+    .head15_menu_big ul li:hover ul li a {
+      display: block;
+      background: #cccccc;
+      color: #000;
+      border-width: 1px 1px 0 0;
+    }
+
+    .head15_menu_big ul li:hover ul li a:hover {
+      background: #535353;
+      color: #000;
+    }
+
+    .head15_top_bar1 {
+      width: 100%;
+      height: 70px;
+      text-align: center;
+      float: left;
+      position: relative;
+      background-image: url(images/guanggao2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    <!--在这里引入轮播图片样式-->body {
+      padding: 30px;
+    }
+
+    #container div,
+    #container ul,
+    #container li,
+    #container img {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #container {
+      height: 457px;
+      width: 600px;
+      border: 3px solid rgb(111, 111, 111);
+      position: absolute;
+      overflow: hidden;
+    }
+
+    #uList {
+      width: 3000px;
+      height: 400;
+      position: absolute;
+      z-index: 1;
+    }
+
+    #uList li {
+      margin-top: 30px;
+      float: left;
+    }
+    .play{
+      animation:lunbo 15s linear infinite;
+    }
+    .play img{
+      float:left;
+    }
+    @keyframes lunbo{
+      0%,15%{left:0px;}
+      20%,35%{left:-600px;}
+      40%,55%{left:-1200px;}
+      60%,75%{left:-1800px;}
+      80%,100%{left:-2400px;}
+    }
+  </style>
+  <script language="JavaScript">
+    var timerID = null
+    var timerRunning = false
+    function stopclock() {
+      if (timerRunning)
+        clearTimeout(timerID);
+      timerRunning = false
+    }
+    function showtime() {
+      var now = new Date();
+      var year = now.getFullYear();
+      var month = now.getMonth() + 1;
+      var date = now.getDate();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var day = now.getDay();
+      var Day = new Array("星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+
+      var timeValue = "";
+      timeValue += year + "年";
+      timeValue += ((month < 10) ? "0" : "") + month + "月";
+      timeValue += date + "日  ";
+      timeValue += (Day[day]) + "  ";
+      timeValue += ((hours <= 12) ? hours : hours - 12);
+      timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+      timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+      timeValue += (hours < 12) ? "上午" : "下午";
+      //document.getElementById("tClock").innerHTML = timeValue;
+      document.getElementsByClassName("head15_menu")[0].innerHTML = timeValue;
+
+      timerID = setTimeout("showtime()", 1000);
+      timerRunning = true
+    }
+    function startclock() {
+      stopclock();
+      showtime()
+    }
+    //页面加载启动js事件处理程序
+    window.onload = function () {
+      //引入时钟js代码
+      startclock();
+      //引入轮播图片js代码
+      //获取节点元素
+      // var container = document.getElementById("container");
+      // var uList = document.getElementById("uList");
+      // var btn = document.getElementById("btn").getElementsByTagName("li");
+      // var index = 1;
+
+      // function show() {
+      //   for (var i = 0; i < btn.length; i++) {
+      //     if (btn[i].className == "on") {
+      //       btn[i].className = "";
+      //     }
+      //   }
+      //   btn[index - 1].className = "on";
+
+      // }
+      // /*next.onclick=function(){
+      // uList.style.left=parseInt(uList.style.left)-600+'px';
+      // if(parseInt(uList.style.left)<-3000){
+      //   uList.style.left=-600+'px';
+      //   }
+      // }*/
+
+      // function animate(offset) {
+      //   var nLeft = parseInt(uList.style.left) + offset + "px";
+      //   uList.style.left = nLeft;
+      //   if (parseInt(nLeft) > 0) {
+      //     uList.style.left = -2400 + "px";
+      //   }
+      //   if (parseInt(nLeft) <= -3000) {
+      //     uList.style.left = 0 + "px";
+      //   }
+
+      // }
+
+      // next.onclick = function () {
+      //   if (index == 5) {
+      //     index = 1;
+      //   }
+      //   else {
+      //     index += 1;
+      //   }
+      //   show();
+      //   animate(-600);
+      // }
+      // pre.onclick = function () {
+      //   if (index == 1) {
+      //     index = 5;
+      //   }
+      //   else {
+      //     index -= 1;
+      //   }
+
+      //   show();
+      //   animate(600);
+      // }
+      for (var i = 0; i < btn.length; i++) {
+        btn[i].onclick = function () {
+          if (this.className == "on") {  //优化程序
+            return;                 //返回，退出程序
+          }
+          var myIndex = parseInt(this.getAttribute("index"));
+          var offset = -600 * (myIndex - index)
+          animate(offset);
+          index = myIndex;
+          show();
+        }
+      }
+    }
+  </script>
+</head>
+
+<body style="background-image: url(images/tang.jpg);">
+  <header class="head15">
+    <!--页头-->
+    <div class="head15_top">
+      <div class="head15_top_box">
+        <div class="login15"><a href="注册界面.html"
+            style="text-decoration: none;font-size: large;font-weight: bolder;font-family:'Courier New', Courier, monospace">请先登录！</a>
+          <a href="购物车页面.html" style="text-decoration: none;font-size:15px;margin-left:50px;font-family:'Courier New', Courier, monospace;font-size:large">我的购物车<img src="images/buy.png" alt=""></a>
+        </div>
+        <div id="tClock" style="cursor: pointer;" class="head15_menu"></div>
+      </div>
+    </div>
+    <div class="head15_top_bar1"></div>
+    <nav class="head15_menu_bg">
+      <div class="logo">
+        <img src="images/logo.png" alt="">
+      </div>
+      <div class="head15_search">
+        <form action="" class="parent">
+          <input type="text" class="search" placeholder="您想要的数码产品，这儿都有" id="input" autocomplete="off">
+          <button type="button" name="" id="button" class="btn" style="cursor: pointer;" onclick='window.open("http://www.baidu.com/s?wd="+document.getElementById("input").value)'><a href="#"><img
+                src="images/f.png" alt=""></a></button>
+      </div>
+      <div class="head15_menu_box">
+        <div class="head15_menu_all_OnlineCategory"></div>
+        <div class="head15_menu_big">
+          <!--在这个div中编写导航栏-->
+          <ul>
+            <li><a href="#home" style="border-radius:5px 0 0 5px;">首页</a></li>
+            <li><a href="#news">家庭智能产品</a>
+              <ul>
+                <li><a href="#">集成智能遥控器</a></li>
+                <li><a href="#">扫地机器人</a></li>
+                <li><a href="#">智能网关</a></li>
+                <li><a href="#">智能语音中控主机</a></li>
+                <li><a href="#">环境监测</a></li>
+
+              </ul>
+            </li>
+            <li><a href="#contact">个人产品</a>
+              <ul>
+                <li><a href="#">手机</a></li>
+                <li><a href="#">平板</a></li>
+                <li><a href="#">VR</a></li>
+                <li><a href="#">音频</a></li>
+                <li><a href="#">电脑</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">技术支持</a>
+              <ul>
+                <li><a href="#">菜鸟教程</a></li>
+                <li><a href="#">GetHub</a></li>
+                <li><a href="#">CSDN</a></li>
+                <li><a href="#">简书</a></li>
+              </ul>
+            </li>
+            <li><a href="#about" style="border-radius:0 5px 5px 0;">关于数码超市</a>
+              <ul>
+                <li><a href="#">网站介绍</a></li>
+                <li><a href="#">赞助商</a></li>
+                <li><a href="#">招贤纳士</a></li>
+                <li><a href="#">联系我们</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="content">
+    <div id="focus">
+      <div class="dd">
+        <span style="color: rgb(39, 201, 250);margin-left: 15px;cursor: pointer;">———<a href="#"
+            style="text-decoration: none; cursor: pointer;color: rgb(133, 240, 248);">电脑专区</a>————</span>
+        <li style="cursor: pointer;"><a href="https://alienware.dell-brand.com/fy200130/">ALIENWARE</a>&nbsp;/&nbsp;<a
+            href="https://www.acer.com.cn/index.html">ACER</a></li>
+        <li style="cursor: pointer;"><a href="https://www.machenike.com/">MACHENIKE</a>&nbsp;/&nbsp;<a
+            href="https://www.asus.com.cn/ROG-Republic-Of-Gamers/">ROG-玩家国度</a>&nbsp;/&nbsp;<a
+            href="https://www.hpstore.cn/omen-iip">HP(惠普)</a></li>
+        <span style="color:rgb(39, 201, 250);margin-left: 15px;cursor: pointer;">———<a href="#"
+            style="text-decoration: none; cursor: pointer;color:  rgb(133, 240, 248);">手机专区</a>————</span>
+        <li style="cursor: pointer;"><a href="https://www.apple.com.cn/">iPhone</a>&nbsp;/&nbsp;<a
+            href="https://www.samsung.com/cn/">SΛMSUNG</a>&nbsp;/&nbsp;<a href="#">MI</a></li>
+        <li style="cursor: pointer;"><a href="#">华为</a>&nbsp;/&nbsp;<a href="">Realme</a>&nbsp;/&nbsp;<a
+            href="">VIVO</a></li>
+        <span style="color:rgb(39, 201, 250);margin-left: 15px;cursor: pointer;">———<a href="#"
+            style="text-decoration: none; cursor: pointer;color:  rgb(133, 240, 248);">相机专区</a>————</span>
+        <li style="cursor: pointer;"><a href="#">尼康</a>&nbsp;/&nbsp;<a href="#">Casio</a>&nbsp;/&nbsp;<a
+            href="#">SONY</a>&nbsp;/&nbsp;<a href="#">佳能</a>&nbsp;/&nbsp;<a href="#">Leica(徕卡)</a></li>
+        <span style="color:rgb(39, 201, 250);margin-left: 15px;cursor: pointer;">——<a href="#"
+            style="text-decoration: none; cursor: pointer;color:  rgb(133, 240, 248);">电脑外设专区</a>———</span>
+        <li style="cursor: pointer;"><a href="#">雷蛇</a>&nbsp;/&nbsp;<a href="#">Cherry</a>&nbsp;/&nbsp;<a
+            href="#">罗技</a>&nbsp;/&nbsp;<a href="#">卓威</a>&nbsp;/&nbsp;<a href="#">AKKO</a>&nbsp;/&nbsp;<a
+            href="#">JBL</a>&nbsp;/&nbsp;<a href="#">BOSE</a></li>
+        <span style="color:rgb(39, 201, 250);margin-left: 15px;cursor: pointer;">——<a href="#"
+            style="text-decoration: none; cursor: pointer;color:  rgb(133, 240, 248);">智能家居专区</a>———</span>
+        <li style="cursor: pointer;"><a href="#">HIKVISION</a>&nbsp;/&nbsp;<a href="#">360</a>&nbsp;/&nbsp;<a
+            href="#">凌防</a>&nbsp;/&nbsp;<a href="#">岡祈</a>&nbsp;/&nbsp;<a href="#">联想</a>&nbsp;/&nbsp;<a
+            href="#">小米智能</a>&nbsp;/&nbsp;<a href="#">倍思</a>&nbsp;/&nbsp;<a href="#">萤石</a></li>
+      </div>
+      <div class="inner" id="container" style="margin-left:225px">
+        <ul id="uList" class="play" style="left:0px">
+          <li><a href="https://alienware.dell-brand.com/fy200130/"><img src="images/event-1-1.jpg"></a></li>
+          <li><a href="https://www.hpstore.cn/laptops-tablets/personal-laptops/omen-laptops.html"><img src="images/event-1-2.jpg"></a></li>
+          <li><a href="https://www.mi.com/redmik30s"><img src="images/event-1-3.jpg"></a></li>
+          <li><a href="https://shop.canon.com.cn/prodetails?product_id=2351&smt_cp=0&smt_pl=ICP&smt_md=guanwangshouye&s_channel=guanwangshouye"><img src="images/event-1-4.jpg"></a></li>
+          <li><a href="https://www.machenike.com/lists/4.html"><img src="images/event-1-5.jpg"></a></li>
+        </ul>
+        </div>
+        <div class="news">
+          <li><a
+              href="https://detail.tmall.com/item.htm?spm=a230r.1.14.16.6a7d5fd5XfrRew&id=627420031394&ns=1&abbucket=11">ROG
+              RTX3080/3090显卡电竞主...</a></li>
+          <li><a
+              href="https://detail.tmall.com/item.htm?spm=a230r.1.14.96.4ec44a0eWsrD9q&id=569346564120&ns=1&abbucket=11">爱国者Type-c手机U盘128G高速...</a>
+          </li>
+          <li><a
+              href="https://detail.tmall.hk/hk/item.htm?tbpm=1&spm=a230r.1.14.307.8db56c204r4uQF&id=600592828177&ns=1&abbucket=11&sku_properties=5919063:57445706;122216431:28473">索尼Sony
+              PS4 Pro PlayStation4...</a></li>
+          <li><a href="#">Canon/佳能EOS M6二代 mark2...</a></li>
+          <li><a href="#">小米米家激光投影仪4K投影超高...</a></li>
+          <li><a href="#">AOC 27G2 27英寸144HZ电竞IP...</a></li>
+          <li><a href="#">联想麦克风um20s全民K歌定制...</a></li>
+          <li><a href="#">Apple/苹果apple pencil新款...</a></li>
+          <li><a href="#">Huawei/华为AX3 Pro路由器四...</a></li>
+          <li><a href="#">GPS定位无人机航拍器6K高清专...</a></li>
+          <li><a href="#">Casio手表男GWN-1000-2A航海...</a></li>
+          <li><a href="#">i7高配独显四核27英寸办公家庭...</a></li>
+          <li><a href="#">JBL PULSE3音乐脉动3炫彩蓝牙...</a></li>
+        </div>
+      </div>
+      <div class="shop">
+        <div class="mt" style="height: 50px;text-align: left;">
+          <img src="images/hot.png" alt="" style="margin-left: 10px;;">
+          <a href="#"
+            style="cursor: pointer;font-size: 25px;color: brown;font-weight: bolder;font-family: 'Courier New', Courier, monospace;text-decoration: none;">热销推荐</a>
+        </div>
+        <div class="mc">
+          <div class="spacer"></div>
+          <ul>
+            <li>
+              <a target="_blank" href="https://www.logitech.com.cn/zh-cn" style="width:197px;padding:0px;">
+                <img class="bigger" src="images/1.jpg" alt="Ballade" width="197px" height="180px">
+              </a>
+              <div class="tag" style="text-align:center;"><a href="">罗技G502</a></div>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.taobao.com/" style="width:197px;padding:0px;">
+                <img class="bigger" src="images/2.jpg" alt="Ballade" width="197px" height="180px">
+              </a>
+              <div class="tag" style="text-align:center;"><a href="">CHERRY键盘</a></div>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.taobao.com/" style="width:197px;padding:0px;">
+                <img class="bigger" src="images/3.jpg" alt="Ballade" width="197px" height="180px">
+              </a>
+              <div class="tag" style="text-align:center;"><a href="">SONY微单</a></div>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.taobao.com/" style="width:197px;padding:0px;">
+                <img class="bigger" src="images/4.jpg" alt="Ballade" width="197px" height="180px">
+              </a>
+              <div class="tag" style="text-align:center;"><a href="">AirPods</a></div>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.taobao.com/" style="width:197px;padding:0px;">
+                <img class="bigger" src="images/5.jpg" alt="Ballade" width="197px" height="180px">
+              </a>
+              <div class="tag" style="text-align:center;"><a href="">森海塞尔HD 800S</a></div>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <footer class="f">
+      <!--页脚-->
+      <div class="footer-1">
+        <div class="ggao"><img src="images/you.png" alt=""></div>
+        <div class="footer-2">
+          <dl>
+            <dt>购买指南</dt>
+            <dd><a href="#">会员介绍</a></dd>
+            <dd><a href="#">团购</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">联系客服</a></dd>
+          </dl>
+          <dl>
+            <dt>支付方式</dt>
+            <dd><a href="#">在线支付</a></dd>
+            <dd><a href="#">货到付款</a></dd>
+            <dd><a href="#">分期付款</a></dd>
+            <dd><a href="#">公司转账</a></dd>
+          </dl>
+          <dl>
+            <dt>配送方式</dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">限时达</a></dd>
+            <dd><a href="#">速达配送</a></dd>
+            <dd><a href="#">配送费收取标准</a></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl>
+            <dt>售后服务</dt>
+            <dd><a href="#">售后政策</a></dd>
+            <dd><a href="#">退款说明</a></dd>
+            <dd><a href="#">价格保护</a></dd>
+            <dd><a href="#">返修/退换货</a></dd>
+            <dd><a href="#">取消订单</a></dd>
+          </dl>
+          <dl>
+            <dt>法律信息</dt>
+            <dd><a href="#">服务协议</a></dd>
+            <dd><a href="#">隐私政策</a></dd>
+            <dd><a href="#">知识产权</a></dd>
+          </dl>
+          <dl>
+            <dt>加入我们</dt>
+            <dd><a href="#">社会招聘</a></dd>
+            <dd><a href="#">校园招聘</a></dd>
+            <dd><a href="#">国际招聘</a></dd>
+          </dl>
+        </div>
+        <div class="footer-3">
+          <p style="cursor: pointer;" class="fpa"><a href="#">服务条款</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+              href="#">隐私保护指引</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">隐私</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+              href="#">使用条件</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">法律条款</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+              href="#">合作招商</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">商家帮助</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+              href="#">手机客户端下载</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">广告服务及商务合作</a></p>
+          <p style="cursor: pointer;"><a href="#">COPYRIGHT © 1998 – 2021 SHUMASUPERMARKET. ALL RIGHTS RESERVED.</a></p>
+          <p style="cursor: pointer;"><a href="#">数码超市 版权所有</a></p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

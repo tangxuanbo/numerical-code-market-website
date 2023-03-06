@@ -1,0 +1,356 @@
+/* CSS Document */
+
+div{display:block;}
+.head15 {
+    width: 100%;
+    float: left;
+    color: #3e4141;
+}
+.head15_top{
+	width:100%;
+	float:left;
+}
+.head15_top_box {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 79;
+}
+.head15_top .login15 {
+    color: #ffffff;
+    line-height: 30px;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+.login15 img{
+    cursor: pointer;
+    margin-bottom: -5px;
+}
+.login15 a{
+    color: rgb(255, 255, 255);
+}
+.login15 a:hover{
+    color: rgb(255, 0, 200);
+}
+.head15_menu {
+    float: right;
+}
+#tClock{
+    background: -webkit-linear-gradient(45deg, #0c08fa, #ff0000, #0105ee, #ff0000, #04ff26);
+    -moz-linear-gradient:(45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
+    -ms-linear-gradient:(45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
+    color: transparent;
+    /*设置字体颜色透明*/
+    -webkit-background-clip: text;
+    /*背景裁剪为文本形式*/
+    animation: ran 20s linear infinite;
+    /*动态10s展示*/
+}
+@keyframes ran {
+    from {
+        backgroud-position: 0 0;
+    }
+    to {
+    background-position: 2000px 0;
+    }
+}
+/*广告条样式*/
+.head15_top_bar {
+    width: 100%;   
+    height: 60px;
+    text-align: center;
+    float: left;
+	position:relative;
+}
+
+/*logo和搜索样式*/
+.box1100 {
+    width: 1100px;
+    margin: 0 auto;
+}
+.head15_logo_box {
+    width: 1100px;
+    float: left;
+}
+.logo {
+    width: 240px;
+    height: 80px;
+    float: left!important;
+    display: inline;
+    margin-left: 50px;
+}
+.logo img{
+    height: auto;
+    max-width: 100%;
+}
+.head15_search {
+    float: right;
+    height: 54px;
+    width:350px;
+    position: relative;
+    z-index: 49;
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-top: 25px;
+}
+.parent {
+    position: relative;
+}
+.search {
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid rgb(121, 121, 121);
+    padding-left: 20px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 14px;
+    background-color: rgb(187, 187, 187);
+}
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+    color:rgb(0, 0, 0,0.5); 
+}    
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color:rgb(0, 0, 0,0.5); 
+}   
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color:rgb(0, 0, 0,0.5); 
+} 
+input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color:rgb(0, 0, 0,0.5); 
+}
+input{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+.btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: no-repeat -2px -99px;
+	top:8px;
+    left: 285px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*导航条样式*/
+.head15_menu_bg {
+    height: 46px;
+    width: 100%;
+    float: left;
+}
+.head15_menu_box {
+    width: 1100px;
+    height: 44px;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.head15_menu_all_OnlineCategory {
+    position: relative;
+    z-index: 39;
+    float: left;
+    width: 210px;
+	line-height:44px;
+}
+.head15_menu_big {
+    float: right;
+    height: 40px;
+    margin: 2px 0 0 2px;
+	line-height:32px;
+}
+
+/*网页主体*/
+ .content{
+    float:left;
+    margin-top: 30px;
+    width:100%;}
+ #focus {
+	margin:25px auto;
+    width: 1100px;
+	height:466px;
+	/*border:1px solid #F90;*/
+
+}
+
+/*左侧导航*/
+
+ .dd {
+    margin-top: 5px;
+    height: 460px;
+    border: 1px solid rgb(111, 111, 111);
+	width:210px;
+    float:left;
+    background-color: rgb(48, 44, 44,0.5);
+}
+.dd li{
+    line-height: 30px;
+    margin-left: 15px;
+    list-style-type:none;
+}
+.dd li a{
+    color: white;
+    text-decoration: none;
+}
+.dd li a:hover{
+    color: rgb(235, 1, 118);
+}
+/*图片轮播*/
+ .inner {
+    width: 620px;
+    margin-left:10px;
+    height: 462px;
+	margin-top:4px;
+    overflow: hidden;
+	float:left;
+	background-color:rgb(0, 0, 0);
+}
+/*右侧新闻*/
+.news {
+    height: 460px;
+    width: 248px;
+    overflow: hidden;
+	margin-top:4px;
+    border: solid 1px rgb(111, 111, 111);
+   /* border-bottom: 0;*/
+    float:right;
+    background-color: rgb(48, 44, 44,0.5);
+}
+.news li{
+    list-style: none;
+    line-height: 34px;
+    border-bottom: 2px dashed rgb(96, 51, 51);
+}
+.news li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.news li a:hover{
+    color: rgb(235, 1, 118);
+}    
+/*商品展示*/
+.shop{margin:0 auto;
+    width: 1100px;
+	height:269px;
+    margin-top:20px;
+}	
+.mt{
+    height:36px;
+	overflow:hidden;
+    line-height:36px;
+    margin-top: 0;
+}
+.mc{
+    height: 232px;
+    border-top: 0;
+    overflow: visible;
+}
+.mc li{
+    float: left;
+    margin-left: 5px;
+}
+.spacer {
+    position: relative;
+    height: 1px;
+    line-height: 0;
+    font-size: 0;
+    background-color: #d1d1d1;
+}
+.shop ul {
+    /*padding-top: 20px;*/
+    overflow: hidden;
+	list-style:none;
+}
+.shop ul li{
+    float: left;
+	height: 210px;
+    width: 197px;
+    overflow: hidden;
+	display:list-item;
+	margin-right:10px;
+	background-color:#CFF;
+}
+.bigger {
+    transition:transform 0.5s;
+} 
+.bigger:hover{
+    transform: scale(1.1,1.1); 
+}
+.tag a{
+    text-decoration: none;
+    font-size:20px;
+    font-family:monospace;
+    font-weight: bolder;
+}
+.tag:hover{
+    border-bottom: 4px solid rgb(216, 108, 6);
+}
+/*页脚*/
+.f{
+    float:left;
+    width:100%;
+    margin-top: 30px;
+}
+.footer-1{
+	margin:0 auto;
+    width: 100%;
+	height:365px;	
+    margin-top:20px;
+}
+.ggao{
+    margin: 0 auto;
+    height: 70px;
+    text-align: center;
+    border-top: 2px solid rgb(136, 136, 136);
+    border-bottom: 2px solid rgb(136, 136, 136);
+}
+.footer-2{
+    width: 1000px;
+    margin: 0 auto;
+    height: 180px;
+}
+dl{
+    float: left;
+    margin-left: 96px;
+    line-height: 26px;
+}
+dt{
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+dd{
+    font-size: 12px;
+    margin: 0;
+}
+dd a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+dd a:hover{
+    color:rgb(235, 32, 32);
+}  
+.footer-3{	
+    height: 100px;
+    text-align: center;
+}
+.footer-3 p{
+    color: rgb(105, 96, 96);
+}
+.footer-3 a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+}
+.fpa a:hover{
+    border-bottom: 2px solid rgb(0, 43, 233);
+}
+	
+
+	

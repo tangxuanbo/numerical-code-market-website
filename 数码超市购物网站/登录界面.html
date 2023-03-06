@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>数码超市 | 欢迎登录 ！</title>
+   <link href="css/login.css" rel="stylesheet">
+   <link href="images/logo.ico" rel="shortcut icon">
+   <script language="javascript">
+      function checkForm() {
+         
+         var phone = document.getElementById("phone").value;
+         var pwd1 = document.getElementById("pwdId1").value;
+         if (phone == "" || phone == null) {
+            alert("请输入您的手机号！")
+            return false;
+         }
+         if (pwd1.length != 0) {
+            alert("恭喜您，登录成功！！！");
+            function func(){
+               var msg = confirm("登陆成功");
+               if (msg==true) {
+                   return true;
+                  }
+            }
+         } else {
+            alert("密码不能为空！\n请输入密码！");
+            return false;
+         }
+      }
+   </script>
+</head>
+
+<body style="background-image: url(images/xuan.jpg);">
+   <div class="box">
+      <form action="数码超市首页.html" method="post" id="form1" onSubmit="return checkForm()">
+         手&nbsp;机&nbsp;号&nbsp;码&nbsp;&nbsp;<input type="text" id="phone"
+            style="font-size: 13px;margin-top: 10px;border-radius:4px;border:1px solid #CBE6FF;height: 30px;width: 230px;"
+            autocomplete="off" placeholder="请输入您的手机号码" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')">
+         <!-- maxlength="11"  这是input输入框不能多余11位数代码         autocomplete="off"  输入框不记录输入过信息的方法 -->
+         <p></p>
+         密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;&nbsp;<input type="password" name="pwd1" id="pwdId1"
+            style="font-size: 13px;margin-top: 10px;border-radius:4px;border:1px solid #CBE6FF;height: 30px;width: 230px;"
+            autocomplete="off" oninput="validateFeeling(this)" placeholder="请输入您的6-18位数密码" minlength="6" maxlength="18">
+         <p></p>
+         <a class="forget" href="#" style="cursor: pointer;text-decoration: none;margin-left: 150px;color: #1D92FF;">忘记密码</a>
+         <label style="color:#0a0a0a;">
+         <input class="remeber" type="checkbox" style="margin-left: 10px;font-size:large;"> 记住密码
+         </label>
+         <p></p>
+         <input type="submit" id="register" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" -webkit-appearance: button;
+            style="background:#1D92FF;font-size:large;margin-left: 15px;height: 40px;width: 320px;border-radius: 5px;border:1px solid #1D92FF;cursor: pointer;color: white;"
+            >
+      </form>
+   </div>
+</body>
+
+</html>

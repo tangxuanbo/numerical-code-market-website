@@ -1,0 +1,37 @@
+.box {
+  width: 400px;
+  height: 540px;
+  border: 1px solid rgb(102, 102, 102);
+  margin: 150px auto;
+  background-color: rgb(255, 255, 255,0.96);
+  border-radius: 30px;
+}
+form{
+  margin: 20px auto;
+  padding-left: 30px;
+}
+.color{
+  color:rgb(255, 0, 0);
+}
+
+.box li a:hover{
+	color:rgb(2, 247, 63);
+}
+input{
+  background:#CBE6FF;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+  color:white; 
+} 
+  
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+  color:white; 
+} 
+  
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+  color:white;
+} 
+  
+input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+  color:white;
+} 

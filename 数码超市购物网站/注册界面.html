@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>数码超市 | 欢迎注册 ！</title>
+   <link href="css/post.css" rel="stylesheet">
+   <link href="images/logo.ico" rel="shortcut icon">
+   <script language="javascript">
+      function checkForm() {
+         var userName = document.getElementById("userName").value;
+         var phone = document.getElementById("phone").value;
+         var email = document.getElementById("email").value;
+         var firstname = document.getElementById("firstname").value;
+         var userName = document.getElementById("userName").value;
+         var pwd1 = document.getElementById("pwdId1").value;
+         var pwd2 = document.getElementById("pwdId2").value;
+         if (userName == "" || userName == null) {
+            alert("昵称不能为空！！")
+            return false;
+         }
+         if (phone == "" || phone == null) {
+            alert("手机号码不能为空！！")
+            return false;
+         }
+         if (email == "" || email == null) {
+            alert("电子邮箱不能为空！！")
+            return false;
+         }
+         if (firstname == "" || firstname == null) {
+            alert("姓名不能为空！！")
+            return false;
+         }
+         if (pwd1 == pwd2) {
+            if (pwd1.length != 0) {
+               alert("恭喜您注册成功！");
+               return true;
+            } else {
+               alert("密码不能为空！\n请输入密码！");
+               return false;
+            }
+         } else {
+            alert("确认密码必须和输入密码相同！");
+            return false;
+         }
+         
+      }
+      function check() {
+         if (!document.getElementById("Agree").checked) {
+            alert("请先同意服务条款");
+            return false
+         }
+         return true
+      }
+      
+   </script>
+</head>
+
+<body style="background-image: url(images/xuan.jpg);">
+   <div class="box">
+      <form action="登录界面.html" method="post" id="form1" onSubmit="return checkForm()">
+         昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称&nbsp;&nbsp;<input type="text" id="userName"
+            style="font-size: 13px;margin-top: 10px;border-radius:6px;border:1px solid #CBE6FF;height: 30px;width: 220px;"
+            autocomplete="off" placeholder="请输入您的昵称"><span class="color"
+            style="font-size: large;font-weight: bolder;">*</span>
+         <p></p>
+         手&nbsp;机&nbsp;号&nbsp;码&nbsp;&nbsp;<input type="text" id="phone"
+            style="font-size: 13px;margin-top: 10px;border-radius:6px;border:1px solid #CBE6FF;height: 30px;width: 220px;"
+            autocomplete="off" placeholder="请输入您的手机号码" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')"><span
+            class="color" style="font-size: large;font-weight: bolder;">*</span>
+         <!-- maxlength="11"  这是input输入框不能多余11位数代码         autocomplete="off"  输入框不记录输入过信息的方法 -->
+         <p></p>
+         电&nbsp;子&nbsp;邮&nbsp;箱&nbsp;&nbsp;<input type="email" id="email"
+            style="font-size: 13px;margin-top: 10px;border-radius:6px;border:1px solid #CBE6FF;height: 30px;width: 220px;"
+            autocomplete="off" placeholder="请输入您的电子邮箱"><span class="color"
+            style="font-size: large;font-weight: bolder;">*</span>
+         <p></p>
+         姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;<input type="text" id="firstname"
+            style="font-size: 13px;margin-top: 10px;border-radius:6px;border:1px solid #CBE6FF;height: 30px;width: 220px;"
+            autocomplete="off" placeholder="请输入您的姓名"><span class="color"
+            style="font-size: large;font-weight: bolder;">*</span>
+         <p></p>
+         密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;&nbsp;<input type="password" name="pwd1" id="pwdId1"
+            style="font-size: 13px;margin-top: 10px;border-radius:6px;border:1px solid #CBE6FF;height: 30px;width: 220px;"
+            autocomplete="off" placeholder="请输入您的6-18位数密码" minlength="6" maxlength="18"><span class="color"
+            style="font-size: large;font-weight: bolder;">*</span>
+         <p></p>
+         确&nbsp;认&nbsp;密&nbsp;码&nbsp;&nbsp;<input type="password" name="pwd2" id="pwdId2"
+            style="font-size: 13px;margin-top: 10px;border-radius:6px;border:1px solid #CBE6FF;height: 30px;width: 220px;"
+            autocomplete="off" placeholder="请再次输入您的密码" minlength="6" maxlength="18"><span class="color"
+            style="font-size: large;font-weight: bolder;">*</span>
+         <p></p>
+         <label style="color:#999999;">
+         <input type="checkbox" name="Agree" id="Agree" style="margin-left: 70px;font-size: 10px;"> 我已看过并接受<a href="#"
+            style="text-decoration: none;color:#1D92FF">《用户协议》</a>
+         </label>   
+         <p></p>
+         <input type="submit" name="button" id="button" onclick="return check()" value="注&nbsp;&nbsp;&nbsp;&nbsp;册"
+            -webkit-appearance: button;
+            style="background:#1D92FF;cursor: pointer;font-size:large;margin-left: 15px;height: 40px;width: 320px;border-radius: 5px;border:1px solid #CBE6FF;margin-top:10px;color: white;" />
+         <p></p>
+         <li style="list-style:none;margin-top:20px;text-align: center;color: #999999;">已有帐号？<a href="登录界面.html" style="text-decoration:none;color: #1D92FF;">立即登录</a></li>
+      </form>
+   </div>
+</body>
+
+</html>
